@@ -1,15 +1,9 @@
-#name = raw_input("What is your name?\n")
-name="aaa aaa"
-mylist=list()
+name = raw_input("Enter the input string: ")
 reverselist=list()
-mylist.extend(name)
 
-print len(mylist)
-for i in range(-(len(mylist)-1),1):
-    reverselist.extend(mylist[-i])
-print reverselist
+for i in range(-(len(name)-1),1):
+    reverselist.append(name[-i])
 
-if mylist == reverselist:
-    print "yes"
-else:
-    print "no"
+reverseString = "".join(map(str,reverselist))
+print reverseString
+
